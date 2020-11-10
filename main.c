@@ -2,20 +2,24 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-//Practice 03
+//Practice 04
+void swap(int *x, int *y)
+{
+	int temp;
+	
+	temp =*x;
+	*x = *y;
+	*y = temp;
+}
 void main(void) {
 	
-	int i =4; 
-	int j =300;
+	int a=3;
+	int b=5;
 	
-	int *pi_i =&i;
-	char *pc_i =&i;
+	swap(&a, &b);
 	
-	int *pi_j =&j;
-	char *pc_j =&j;
-		
-	printf("%i, %i, %i\n", i, *pi_i, *pc_i);
-	printf("%i, %i, %i\n", j, *pi_j, *pc_j);
+	printf("a : %i, b : %i\n", a, b);
+	
 	
 	return 0;
 }
