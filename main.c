@@ -2,24 +2,30 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-//Practice 04
-void swap(int *x, int *y)
-{
-	int temp;
+//Practice 05
+int main(void) {
 	
-	temp =*x;
-	*x = *y;
-	*y = temp;
-}
-void main(void) {
+	int i;
+	int grade[5];
+	int avg =0;
 	
-	int a=3;
-	int b=5;
+	for(i=0; i<5; i++)
+	{
+		printf("input grade[%i] = ", i);
+		scanf("%d", &grade[i]);
+	}
 	
-	swap(&a, &b);
+	for(i=0; i<5; i++)
+	{
+		printf("grade[%d] = %d\n", i, grade[i]);
+	}
 	
-	printf("a : %i, b : %i\n", a, b);
+	for(i=0; i<5; i++)
+	{
+		avg += grade[i];
+	}
 	
+	printf("The average is %i.\n", avg/5);
 	
 	return 0;
 }
