@@ -2,16 +2,20 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-//Practice 01
+//Practice 02
 int main(void) {
 	
 	int i =10;
-	char c =69;
-	float f =12.3;
+	char c ='a';
 	
-	printf("i : %i %p \n", &i, &i);
-	printf("c : %i %p \n", &c, &c);
-	printf("f : %i %p \n", &f, &f);
+	int *iptr =&i;
+	char *cptr =&c;
+	int *iptr2;
+	iptr2 = iptr;
+	
+	printf("i : %p\n%p (size: %i)\n", iptr, &i, sizeof(iptr));
+	printf("c : %p\n%p (size: %i)\n", cptr, &c, sizeof(cptr));
+	printf("iptr2 : %p, %i\n", iptr2, *iptr2);
 	
 	return 0;
 }
