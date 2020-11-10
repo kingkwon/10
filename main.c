@@ -8,6 +8,7 @@ int main(void) {
 	int i;
 	int grade[5];
 	int avg =0;
+	int *ptr =grade;
 	
 	for(i=0; i<5; i++)
 	{
@@ -22,7 +23,7 @@ int main(void) {
 	
 	for(i=0; i<5; i++)
 	{
-		avg += grade[i];
+		avg += *(ptr+i);
 	}
 	
 	printf("The average is %i.\n", avg/5);
